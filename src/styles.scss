@@ -1,0 +1,21 @@
+@import "primeicons/primeicons.css";
+
+body {
+  background-color: #000;
+
+  *:not(:focus),
+  *::selection {
+    background: transparent;
+    color: transparent;
+    border: transparent;
+    box-shadow: none;
+  }
+
+  *:focus-visible {
+    color: #fff;
+  }
+}
+
+body.visible {
+  background-color: #fff;
+}
