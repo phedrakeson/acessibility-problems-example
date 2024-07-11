@@ -1,6 +1,6 @@
 @import "primeicons/primeicons.css";
 
-body {
+body:not(.visible) {
   background-color: #000;
 
   *:not(:focus),

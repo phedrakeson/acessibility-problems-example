@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 
@@ -9,4 +9,15 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  public showAlert = false;
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.showAlert = true;
+    }, 5000);
+  }
+
+  public reveal(): void {
+    document.getElementById('body')?.classList.toggle('visible');
+  }
+}
